@@ -1,6 +1,6 @@
 # SciGlassPlus
 
-SciGlassPlus is a Python library providing access to a comprehensive glass database. Due to the large size of the database files, they are hosted on **Figshare**. This README is organized into three main sections:
+SciGlassPlus is a Python library providing access to a comprehensive glass database. Due to the large size of the database files, you can download the original database file on **Figshare**. This README is organized into three main sections:
 
 1. **Database Construction Tutorial** – Step-by-step guide on how the glass database was automatically built using GPT models.  
 2. **Jupyter Notebooks** – Example notebooks to demonstrate how to load the database, filter glasses based on specific compositions and properties, and use machine learning models to predict glass properties.  
