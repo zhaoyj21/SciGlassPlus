@@ -60,10 +60,24 @@ We used LLM models to construct the glass database. The tutorial consists of six
 
 ## 2. Application Demo
 
-Example Jupyter Notebooks include:  
-- Loading the database  
-- Filtering glasses by compositions and properties  
-- Using machine learning models to predict glass properties
+### Installation
+Create a new conda environment with Python 3.11.4:
+### Installation
+```bash
+conda create -n complexity python=3.11.4
+```
+Activate the environment:
+```bash
+conda activate your_env_name
+```
+Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+###Example Jupyter Notebooks include:  
+- Loading the database filtering glasses by compositions (`./composition.ipynb`) and properties (`./property.ipynb`).  
+- Using machine learning models to predict glass properties (`./predictor.ipynb`).
 
 ---
 
