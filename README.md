@@ -74,7 +74,7 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
-###Example Jupyter Notebooks include:  
+### Example Jupyter Notebooks include:  
 - Loading the database filtering glasses by compositions (`./composition.ipynb`) and properties (`./property.ipynb`).  
 - Using machine learning models to predict glass properties (`./predictor.ipynb`).
 
