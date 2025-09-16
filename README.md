@@ -1,6 +1,6 @@
 # Welcome to *SciGlass+*
 
-*SciGlass+* is an enhanced *SciGlass* database constructing by large language model (LLM) and manual cross-validation. Due to the large size of the database files, you can download the **original database file on Figshare**. All script files (.py, .ipynb) can be found in this GitHub repository, while all data files (.json, .csv, .xlsx), due to size limitations, can be downloaded from Figshare.This README is organized into three main sections:
+*SciGlass+* is an enhanced *SciGlass* database constructing by large language model (LLM) and manual cross-validation. Due to the large size of the database files, you can download the [**original database file on Figshare**](https://doi.org/10.6084/m9.figshare.30138427.v1). All script files (.py, .ipynb) can be found in this GitHub repository, while all data files (.json, .csv, .xlsx), due to size limitations, can be downloaded from [**Figshare**](https://doi.org/10.6084/m9.figshare.30138427.v1).This README is organized into three main sections:
 
 1. **Database Construction Tutorial** – Step-by-step guide on how the glass database was automatically built using LLM models.  
 2. **Application Demo** – Example notebooks to demonstrate how to load the database, filter glasses based on specific compositions and properties, and use machine learning models to predict glass properties.  
