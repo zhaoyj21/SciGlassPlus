@@ -1,6 +1,6 @@
 # Welcome to *SciGlass+*
 
-*SciGlass+* is an enhanced SciGlass database constructing by large language model (LLM) and manual cross-validation. Due to the large size of the database files, you can download the **original database file on Figshare**. All script files (.py, .ipynb) can be found in this GitHub repository, while all data files (.json, .csv, .xlsx), due to size limitations, can be downloaded from Figshare.This README is organized into three main sections:
+*SciGlass+* is an enhanced *SciGlass* database constructing by large language model (LLM) and manual cross-validation. Due to the large size of the database files, you can download the **original database file on Figshare**. All script files (.py, .ipynb) can be found in this GitHub repository, while all data files (.json, .csv, .xlsx), due to size limitations, can be downloaded from Figshare.This README is organized into three main sections:
 
 1. **Database Construction Tutorial** – Step-by-step guide on how the glass database was automatically built using LLM models.  
 2. **Application Demo** – Example notebooks to demonstrate how to load the database, filter glasses based on specific compositions and properties, and use machine learning models to predict glass properties.  
@@ -16,7 +16,7 @@ We used LLM models to construct the glass database. The tutorial consists of six
 1. Log in to [Web of Science](https://www.webofscience.com/wos/).  
 2. Select **Advanced Search**.  
 3. Enter keywords in the **Query Preview** field (based on SciGlass, including glass systems, compositions, and properties of interest). Example query:  
-4. Set the **data range** (custom: 2019-01-01 to 2025-01-01) and click **Search**.  
+4. Set the **Data Range** (custom: 2019-01-01 to 2025-01-01) and click **Search**.  
 5. Refine results: select **Article** under "Document Types" and **English** under "Languages".  
 6. Export metadata (Excel format) including title, authors, journal, year, DOI, and abstract. Merge multiple exports into `savedrecs-total.xls`.
 
@@ -45,27 +45,25 @@ We used LLM models to construct the glass database. The tutorial consists of six
 4. Apply classifiers to filter paragraphs/tables: `./src/ParseParaTable-html-xml-sel-tables.ipynb` → `data_xml.json`, `data_html.json`.
 
 ### Step 5: Data Extraction and Database Construction
-1. Extract data from filtered paragraphs/tables using `gpt_extract_method_glass.py` → `result_20241010.json`, `result_html_20241013.json`.  
-2. Convert JSON to Excel and merge batches: `jsonR2Excel&metaD-manual.ipynb` → `glass-data-2019-2024.xlsx`.  
-3. Manual inspection is recommended to improve data quality.
+1. Extract data from filtered paragraphs/tables using `python ./src/gpt_extract_method_glass.py` → `result_20241010.json`, `result_html_20241013.json`.  
+2. Convert JSON to Excel and merge batches: `./src/jsonR2Excel&metaD-manual.ipynb` → `glass-rawdata-2019-2025.xlsx`.  
+3. Manual cross-validation is used to improve data quality.
 
 ### Step 6: Database Verification and Error Correction
 1. Download PDFs of articles to verify extracted data:  
-   - `checkPDFlist.ipynb` → DOI lists  
-   - `elsevier_pdf_download_custom.py` / `pdf_download.py` → PDF files in `pdf_list` folder  
-2. Cross-check each row in `glass-data-2019-2024.xlsx` with the corresponding PDF.  
+   - `./src/checkPDFlist.ipynb` → DOI lists `els_pdf.txt`, `other_pdf.txt`. 
+   - `python ./src/elsevier_pdf_download_custom.py` / `python ./src/pdf_download.py` → download PDF files into `pdf_list` folder (need your API key and subscribe to the relevant publishers or journals)
+2. Cross-check each row in `glass-rawdata-2019-2025.xlsx` with the corresponding PDF.  
 3. After 12 volunteers working 4 hours/day for 10 months (total cost ~40,000 RMB), the verified database `SciGlass_Plus_properties.xlsx` was produced.
 
 ---
 
-## 2. Jupyter Notebook Examples
+## 2. Application Demo
 
-Example notebooks include:  
+Example Jupyter Notebooks include:  
 - Loading the database  
 - Filtering glasses by compositions and properties  
 - Using machine learning models to predict glass properties
-
-*(Details of these notebooks are provided in the repository under `notebooks/`.)*
 
 ---
 
