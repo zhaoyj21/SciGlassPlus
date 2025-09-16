@@ -62,7 +62,6 @@ We used LLM models to construct the glass database. The tutorial consists of six
 
 ### Installation
 Create a new conda environment with Python 3.11.4:
-### Installation
 ```bash
 conda create -n complexity python=3.11.4
 ```
