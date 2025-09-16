@@ -117,3 +117,5 @@ df_filtered = SGP(
 - `"drop"`: columns removed or entries with non-zero values filtered out (for elements and compounds)  
 - `"keep"`: only entries with defined values are kept
 
+##Contact
+For questions about the database or contributions, please contact: **SciGlassPlus@163.com**
