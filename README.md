@@ -15,7 +15,7 @@ We used LLM models to construct the glass database. The tutorial consists of six
 ### Step 1: Literature Search and Metadata Collection
 1. Log in to [Web of Science](https://www.webofscience.com/wos/).  
 2. Select **Advanced Search**.  
-3. Enter keywords in the **Query Preview** field (based on SciGlass, including glass systems, compositions, and properties of interest). Example query:  
+3. Enter keywords in the **Query Preview** field (based on SciGlass, including glass systems, compositions, and properties of interest) `keywords.txt`.
 4. Set the **Data Range** (custom: 2019-01-01 to 2025-01-01) and click **Search**.  
 5. Refine results: select **Article** under "Document Types" and **English** under "Languages".  
 6. Export metadata (Excel format) including title, authors, journal, year, DOI, and abstract. Merge multiple exports into `savedrecs-total.xls`.
