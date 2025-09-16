@@ -4,7 +4,7 @@
 
 1. **Database Construction Tutorial** – Step-by-step guide on how the glass database was automatically built using LLM models.  
 2. **Application Demo** – Example notebooks to demonstrate how to load the database, filter glasses based on specific compositions and properties, and use machine learning models to predict glass properties.  
-3. **API Reference** – Python functions to access and manipulate the SciGlass+ database.
+3. **API Reference** – Python functions to access and manipulate the *SciGlass+* database.
 
 ---
 
