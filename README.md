@@ -15,7 +15,7 @@ We used LLM models to construct the glass database. The tutorial consists of six
 ### Step 1: Literature Search and Metadata Collection
 1. Log in to [Web of Science](https://www.webofscience.com/wos/).  
 2. Select **Advanced Search**.  
-3. Enter keywords in the **Query Preview** field (based on SciGlass, including glass systems, compositions, and properties of interest) `keywords.txt`.
+3. Enter keywords in the **Query Preview** field (based on *SciGlass*, including glass systems, compositions, and properties of interest) `keywords.txt`.
 4. Set the **Data Range** (custom: 2019-01-01 to 2025-01-01) and click **Search**.  
 5. Refine results: select **Article** under "Document Types" and **English** under "Languages".  
 6. Export metadata (Excel format) including title, authors, journal, year, DOI, and abstract. Merge multiple exports into `savedrecs-total.xls`.
@@ -117,5 +117,29 @@ df_filtered = SGP(
 - `"drop"`: columns removed or entries with non-zero values filtered out (for elements and compounds)  
 - `"keep"`: only entries with defined values are kept
 
-## Contact
+## 4. Contact
 For questions about the database or contributions, please contact: **SciGlassPlus@163.com**
+
+## 5. FAIR Compliance
+Based on the definitions of [FAIR principles](https://www.go-fair.org/fair-principles/), the *SciGlass+* is assessed against each FAIR component.
+
+Regarding Findability, each entry in *SciGlass+* is assigned a persistent, globally unique identifier (SGP-#sample, e.g. SGP-26), (F1).
+All entries are described with rich metadata, including authorship, abstracts, keywords, affiliations, contact information, funding sources, citation metrics, publishing details, and descriptive narratives on background, processing methodologies, and underlying mechanisms (F2).
+Metadata explicitly references the identifiers of the corresponding entries through DOI (F3), ensuring clear traceability.
+Furthermore, the dataset is hosted on a GitHub repository and corresponding code, allowing users to locate specific entries efficiently (F4).
+
+In terms of Accessibility, all data and scripts are openly downloadable via standard HTTP(S) protocols, which are open, free, and universally implementable (A1, A1.1).
+Where necessary, the protocol supports authentication and authorization procedures (e.g., via HTTPS and token-based access), thereby fulfilling A1.2.
+Users can access and retrieve both metadata and data without restrictions, and metadata will remain accessible even if the underlying dataset is updated or temporarily unavailable.
+This is ensured by the assignment of persistent identifiers (DOIs) via Figshare or Zenodo, which guarantees long-term accessibility of metadata independently of the dataset files (A2).
+
+For Interoperability, we have proposed the ULG to provide a formal, structured schema for representing composition, processing, property, and metadata (I1).
+Controlled vocabularies are applied consistently across the dataset, including IUPAC-compliant chemical symbols as well as standardized terms for glass composition (I2).
+Qualified references to external sources are maintained through persistent identifiers (DOIs) linking to relevant literature, ensuring that the dataset is properly contextualized and connected to existing knowledge bases (I3).
+
+Concerning Reusability, all metadata are richly described with relevant attributes including authorship, abstracts, keywords, affiliations, contact information, funding sources, citation metrics, publishing details, and descriptive narratives on background, processing methodologies, and underlying mechanisms. (R1).
+Data are released under an open CC-BY 4.0 license, ensuring clear terms for reuse (R1.1).
+Detailed provenance information is included, describing sources, extraction methods, and validation steps (R1.2).
+Units, nomenclature, and field definitions are standardized to support consistent reuse across different research applications (R1.3).
+
+The current dataset and accompanying scripts provide substantial FAIR-compliant capabilities, enabling reproducible, transparent, and programmatic access for computational materials science and machine learning applications.
